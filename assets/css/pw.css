@@ -1,0 +1,555 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/images/NDTV\ Posters\(2\).jpg");
+    color: #000000;
+}
+
+/* Header */
+header {
+    background-image: url("/assets/images/NDTV\ Posters\(4\).jpg");
+    padding: 40px 20px; /* Reduce padding */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    gap: 20px; /* Space between logo and text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+p[draggable]{
+    color:rgb(0, 0, 0);
+}
+
+/*logo*/
+.logo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    background-color: #F6F60F;
+    padding: 5px 10px; /* Adjust padding to fit text */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    display: inline-block; /* Restrict background to text size */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+/* About Section */
+#about img {
+    display: block; /* Prevents extra spacing */
+    max-width: 100%; /* Ensures responsiveness */
+    height: 200px; /* Maintains aspect ratio */
+    margin: 20px auto; /* Centers the image and adds spacing */
+    border-radius: 10px; /* Optional: Soft rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Image Hover Effect */
+#about img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+b {
+    color: #ff0000;
+}
+
+/* Portfolio Gallery */
+#portfolio {
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+* { box-sizing: border-box; }
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.mySlides img {
+    border: 8px solid #fff;            /* Frame border */
+    border-radius: 12px;               /* Rounded corners (optional) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    width: 100%;
+    height: auto;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/9 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Video*/
+
+/* Hover */
+video {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Center the video section */
+#Video {
+    text-align: center;
+    margin: 50px auto;
+    width: 90%;
+}
+
+/* Flexbox for videos in rows */
+.video-row {
+    display: flex;
+    justify-content: left;
+    gap: 20px; /* Space between videos */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Individual video container */
+.video-container {
+    flex: 1 1 calc(33.33% - 20px); /* 3 videos per row */
+    max-width: calc(33.33% - 20px); /* Ensures equal size */
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Make videos responsive */
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1024px) {
+    .video-container {
+        flex: 1 1 calc(50% - 20px); /* 2 videos per row on tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .video-container {
+        flex: 1 1 100%; /* 1 video per row on mobile */
+        max-width: 100%;
+    }
+}
+
+
+/* Contact Form */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    height: 120px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ffdd57;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ffcc00;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Center the social media section */
+#social-media {
+    text-align: center;
+    margin: 50px auto;
+    width: 90%;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Social Icons */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Hover effects for different platforms */
+.facebook { background-color: #3b5998; }
+.twitter { background-color: #1da1f2; }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.linkedin { background-color: #0077b5; }
+.youtube { background-color: #ff0000; }
+
+/* Hover Effects */
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Center the thumbnails section */
+#thumbnails {
+    text-align: center;
+    margin: 50px auto;
+    width: 90%;
+}
+
+/* Flexbox for thumbnails */
+.thumbnail-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Individual thumbnail */
+.thumbnail {
+    flex: 1 1 calc(33.33% - 20px); /* 3 images per row */
+    max-width: calc(33.33% - 20px); /* Ensures equal size */
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Make images responsive */
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1024px) {
+    .thumbnail {
+        flex: 1 1 calc(50% - 20px); /* 2 images per row on tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .thumbnail {
+        flex: 1 1 100%; /* 1 image per row on mobile */
+        max-width: 100%;
+    }
+}
+
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content (Full Image) */
+.modal-content {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Emailer */
+#emailer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+#emailer img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#emailer img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #emailer {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
+    }
+}
+
+
+/* Dropdown */
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 110px;
+    border-radius: 5px;
+    z-index: 1000;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #F8F810;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
